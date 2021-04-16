@@ -40,27 +40,24 @@ const GlobalStyles = createGlobalStyle`
   }
 
   html, body{
-    font-family: 'Bitter', 'Montserrat',serif;
+    font-family: ${(props) => props.theme.font.family.default};
+    background-color: ${(props) => props.theme.color.white};
+    color: ${(props) => props.theme.color.black};
+    font-size: ${(props) => props.theme.font.size.default};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #ffffff;
-    color: #000000;
-    font-size: 16px;
   }
 
   h1 {
-    font-family: 'Bitter';
-    font-size: 2.375rem; /* 38px */
+    font-size: ${(props) => props.theme.font.size.h1};
   }
 
   h3 {
-    font-family: 'Bitter';
-    font-size: 1.5rem;  /* 24px */
+    font-size: ${(props) => props.theme.font.size.h3};
   }
 
   p {
-    font-family: 'Montserrat';
-    font-size: 1rem;
+    font-size: ${(props) => props.theme.font.size.default};
   }
 `;
 
