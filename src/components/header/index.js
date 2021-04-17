@@ -12,7 +12,7 @@ export default function Header() {
         <Logo src={logo} alt="logo" />
       </Link>
       <Nav>
-        <NavLink to="/search">Search</NavLink>
+        <NavLink to="/search/javascript">Search</NavLink>
         <NavLink to="#how-it-works">How it works</NavLink>
         <NavLink to="#about">About</NavLink>
       </Nav>
