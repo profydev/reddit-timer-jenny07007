@@ -16,7 +16,7 @@ export const Logo = styled.img`
 `;
 
 export const NavLink = styled(Link)`
-  font-size: ${(props) => props.theme.font.p};
+  font-size: ${(props) => props.theme.font.size.default};
   color: ${(props) => props.theme.color.gray};
   text-decoration: none;
   margin-left: 25px;
