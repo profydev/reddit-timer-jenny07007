@@ -6,7 +6,6 @@ import 'normalize.css';
 import theme from './theme';
 import GlobalStyles from './global-styles';
 
-// eslint-disable-next-line react/jsx-filename-extension
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <GlobalStyles />
