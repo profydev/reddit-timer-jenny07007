@@ -39,6 +39,10 @@ const GlobalStyles = createGlobalStyle`
     url("/fonts/Bitter-Regular.woff") format("woff");
   }
 
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   html, body{
     font-family: ${(props) => props.theme.font.family.default};
     background-color: ${(props) => props.theme.color.white};
@@ -58,6 +62,10 @@ const GlobalStyles = createGlobalStyle`
 
   p {
     font-size: ${(props) => props.theme.font.size.default};
+  }
+  
+  a {
+    text-decoration: none;
   }
 `;
 

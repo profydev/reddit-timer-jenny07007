@@ -3,6 +3,7 @@ const theme = {
     black: '#000000',
     white: '#ffffff',
     gray: '#636363',
+    lightGray: '#93918F',
   },
   font: {
     family: {
