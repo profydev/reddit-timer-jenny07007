@@ -13,8 +13,8 @@ export default function Header() {
       </Link>
       <Nav>
         <NavLink to="/search/javascript">Search</NavLink>
-        <NavLink to="#how-it-works">How it works</NavLink>
-        <NavLink to="#about">About</NavLink>
+        <NavLink to="/#how-it-works">How it works</NavLink>
+        <NavLink to="/#about">About</NavLink>
       </Nav>
     </Container>
   );
