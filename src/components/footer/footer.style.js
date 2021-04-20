@@ -20,7 +20,9 @@ export const Frame = styled.div`
   }
 `;
 
-export const Sign = styled(SignLogo)``;
+export const Sign = styled(SignLogo)`
+  display: block;
+`;
 
 const baseTextLink = css`
   color: ${(props) => props.theme.color.gray};
