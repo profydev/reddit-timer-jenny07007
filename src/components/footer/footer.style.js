@@ -11,9 +11,13 @@ export const Container = styled.footer`
 export const Frame = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 0 250px;
+  max-width: 940px;
+  margin: auto;
+  
+  @media(max-width: 940px) {
+      padding: 0 20px;
+  }
 `;
 
 export const Sign = styled(SignLogo)``;
@@ -24,9 +28,12 @@ const baseTextLink = css`
 `;
 
 export const TextRouterLink = styled(ReactRouterLink)`
+  flex:1;
+  text-align: right;
   ${baseTextLink};
 `;
 
 export const TextLink = styled.a`
+  flex:1;
   ${baseTextLink};
 `;
