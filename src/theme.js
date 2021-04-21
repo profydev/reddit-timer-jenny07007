@@ -15,6 +15,12 @@ const theme = {
       h1: '38px',
       h3: '24px',
     },
+    lineHeight: {
+      normal: 1.1,
+    },
+    weight: {
+      normal: 400,
+    },
   },
 };
 
