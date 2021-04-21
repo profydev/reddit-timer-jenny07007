@@ -48,7 +48,6 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${(props) => props.theme.color.white};
     color: ${(props) => props.theme.color.black};
     font-size: ${(props) => props.theme.font.size.default};
-    line-height: ${(props) => props.theme.font.lineHeight.normal};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
