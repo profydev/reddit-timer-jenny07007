@@ -29,13 +29,13 @@ const baseTextLink = css`
   font-size: 0.875rem;
 `;
 
-export const TextRouterLink = styled(ReactRouterLink)`
+export const RightLink = styled(ReactRouterLink)`
   flex:1;
   text-align: right;
   ${baseTextLink};
 `;
 
-export const TextLink = styled.a`
+export const LeftLink = styled.a`
   flex:1;
   ${baseTextLink};
 `;
