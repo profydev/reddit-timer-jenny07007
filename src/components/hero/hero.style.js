@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/macro';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.section`
   width: 100vw;
@@ -31,10 +32,11 @@ export const SubTitle = styled.p`
   line-height: 0.9;
 `;
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   width: 216px;
   height: 36px;
-  cursor: pointer;
+  line-height: 36px;
+  display: inline-block;
   text-transform: uppercase;
   border: none;
   border-radius: 4px;

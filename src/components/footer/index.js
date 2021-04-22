@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container, Sign, TextLink, TextRouterLink, Frame,
+  Container, Sign, LeftLink, RightLink, Frame,
 } from './footer.style';
 
 export default function index() {
   return (
     <Container>
       <Frame>
-        <TextLink href="https://profy.dev/employers">profy.dev</TextLink>
+        <LeftLink href="https://profy.dev/employers">profy.dev</LeftLink>
         <Link to="/"><Sign /></Link>
-        <TextRouterLink to="/terms">Terms &amp; Privacy</TextRouterLink>
+        <RightLink to="/terms">Terms &amp; Privacy</RightLink>
       </Frame>
     </Container>
   );
