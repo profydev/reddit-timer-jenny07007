@@ -14,7 +14,9 @@ test('navigates to home page when logo is clicked', () => {
   setup('/search/javascript');
   const logoLink = screen.getByRole('link', { name: 'sign.svg' });
   userEvent.click(logoLink);
-  expect(screen.getByText(/home/i)).toBeInTheDocument();
+
+  const title = /no reactions to your reddit posts?/i;
+  expect(screen.getByText(title)).toBeInTheDocument();
 });
 
 test('navigates to "https://profy.dev/employers" when profy.dev is clicked', () => {

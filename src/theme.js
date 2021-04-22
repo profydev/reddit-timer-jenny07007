@@ -4,6 +4,7 @@ const theme = {
     white: '#ffffff',
     gray: '#636363',
     lightGray: '#93918F',
+    yellow: '#FDB755',
   },
   font: {
     family: {
@@ -14,6 +15,10 @@ const theme = {
       default: '16px',
       h1: '38px',
       h3: '24px',
+    },
+    weight: {
+      normal: 400,
+      medium: 500,
     },
   },
 };

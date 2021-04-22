@@ -1,36 +1,15 @@
-import React from 'react';
-import { MemoryRouter, Route } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ThemeProvider } from 'styled-components';
-import theme from '../theme';
-import App from '../App';
-
-const setup = (initialPath = '/') => {
-  let history;
-  render(
-    <MemoryRouter initialEntries={[initialPath]}>
-      <ThemeProvider theme={theme}>
-        <App />
-        <Route
-          path="*"
-          render={(props) => {
-            history = props.history;
-            return null;
-          }}
-        />
-      </ThemeProvider>
-    </MemoryRouter>,
-  );
-  return { history };
-};
+import { screen } from '@testing-library/react';
+import setup from './setup';
 
 test('navigates to home page when logo is clicked', () => {
   setup('/search/javascript');
   const logoLink = screen.getByRole('link', { name: /logo/i });
   // screen.debug();
   userEvent.click(logoLink);
-  expect(screen.getByText(/home/i)).toBeInTheDocument();
+
+  const title = /no reactions to your reddit posts?/i;
+  expect(screen.getByText(title)).toBeInTheDocument();
 });
 
 test('navigates to search page when search link is clicked', () => {
@@ -49,6 +28,8 @@ test.each`
   const { history } = setup('/search/javascript');
   const hashLink = screen.getByRole('link', { name: link });
   userEvent.click(hashLink);
-  expect(screen.getByText(/home/i)).toBeInTheDocument();
+
+  const title = /no reactions to your reddit posts?/i;
+  expect(screen.getByText(title)).toBeInTheDocument();
   expect(history.location.hash).toEqual(hash);
 });
