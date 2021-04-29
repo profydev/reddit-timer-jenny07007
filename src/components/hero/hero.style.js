@@ -30,6 +30,9 @@ const textBase = css`
 export const SubTitle = styled.p`
   ${textBase};
   line-height: 0.9;
+  @media(max-width: 738px) {
+    line-height: 1.7;
+  }
 `;
 
 export const Button = styled(Link)`
