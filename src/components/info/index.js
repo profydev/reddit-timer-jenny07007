@@ -8,7 +8,7 @@ export default function Info() {
     <Container>
       <Row>
         <Box>
-          <Title>How it works</Title>
+          <Title id="how-it-works">How it works</Title>
           <ListText>
             &#183; We find the 500 top posts from the past year for a subreddit
           </ListText>
@@ -22,14 +22,14 @@ export default function Info() {
         </Box>
 
         <Box>
-          <Title>About</Title>
+          <Title id="about">About</Title>
           {/* &#x2011; for non-breaking hyphen */}
           <Text>
             This app was created during a course on
             {' '}
             <Link href="https://profy.dev">profy.dev</Link>
             {' '}
-            with the goal to implement a pixel&#x2011;perfect real-world application with
+            with the goal toimplement a pixel&#x2011;perfect real-world application with
             professional workflows and tools like Kanban, Asana, Zeplin, GitHub,
             pull requests and code reviews.
             <Link href="https://profy.dev/employers">

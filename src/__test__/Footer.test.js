@@ -21,9 +21,9 @@ test('navigates to home page when logo is clicked', () => {
 
 test('navigates to "https://profy.dev/employers" when profy.dev is clicked', () => {
   setup();
-  const externalLink = screen.getByRole('link', { name: 'profy.dev' });
+  const externalLink = screen.getByTestId('left-link-in-footer');
   userEvent.click(externalLink);
-  expect(screen.getByText('profy.dev').href).toBe('https://profy.dev/employers');
+  expect(screen.getByTestId('left-link-in-footer').href).toBe('https://profy.dev/employers');
 });
 
 test('navigates to terms page when terms link is clicked', () => {

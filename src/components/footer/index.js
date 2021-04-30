@@ -8,7 +8,7 @@ export default function index() {
   return (
     <Container>
       <Frame>
-        <LeftLink href="https://profy.dev/employers">profy.dev</LeftLink>
+        <LeftLink data-testid="left-link-in-footer" href="https://profy.dev/employers">profy.dev</LeftLink>
         <Link to="/"><Sign /></Link>
         <RightLink to="/terms">Terms &amp; Privacy</RightLink>
       </Frame>

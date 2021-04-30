@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container, Logo, Nav, NavLink,
+  Container, Logo, Nav, NavLink, HashLink,
 } from './header.style';
 import logo from '../../img/logotype.svg';
 import { DEFAULT_SUBREDDIT } from '../../constants/subreddit';
@@ -14,8 +14,8 @@ export default function Header() {
       </Link>
       <Nav>
         <NavLink to={`/search/${DEFAULT_SUBREDDIT}`}>Search</NavLink>
-        <NavLink to="/#how-it-works">How it works</NavLink>
-        <NavLink to="/#about">About</NavLink>
+        <HashLink to="/#how-it-works">How it works</HashLink>
+        <HashLink to="/#about">About</HashLink>
       </Nav>
     </Container>
   );
