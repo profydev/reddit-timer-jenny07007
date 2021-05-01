@@ -50,6 +50,8 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${(props) => props.theme.font.size.default};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    line-height: 1;
   }
 
   h1 {

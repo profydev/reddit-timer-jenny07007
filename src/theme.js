@@ -5,6 +5,7 @@ const theme = {
     gray: '#636363',
     lightGray: '#93918F',
     yellow: '#FDB755',
+    blue: '#079afc',
   },
   font: {
     family: {
