@@ -1,18 +1,24 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 
-const setup = (initialPath = '/') => render(
-  <MemoryRouter initialEntries={[initialPath]}>
-    <App />
-  </MemoryRouter>,
-);
+const setup = (initialPath = '/') => {
+  render(
+    <MemoryRouter initialEntries={[initialPath]}>
+      <App />
+    </MemoryRouter>,
+  );
+
+  const footer = screen.getByRole('contentinfo');
+  return { footer };
+};
 
 test('navigates to home page when logo is clicked', () => {
-  setup('/search/javascript');
-  const logoLink = screen.getByRole('link', { name: 'sign.svg' });
+  const { footer } = setup('/search/javascript');
+
+  const logoLink = within(footer).getByRole('link', { name: 'sign.svg' });
   userEvent.click(logoLink);
 
   const title = /no reactions to your reddit posts?/i;
@@ -20,15 +26,17 @@ test('navigates to home page when logo is clicked', () => {
 });
 
 test('navigates to "https://profy.dev/employers" when profy.dev is clicked', () => {
-  setup();
-  const externalLink = screen.getByTestId('left-link-in-footer');
+  const { footer } = setup();
+  const externalLink = within(footer).getByRole('link', { name: 'profy.dev' });
   userEvent.click(externalLink);
-  expect(screen.getByTestId('left-link-in-footer').href).toBe('https://profy.dev/employers');
+
+  expect(externalLink.getAttribute('href')).toEqual('https://profy.dev/employers');
 });
 
 test('navigates to terms page when terms link is clicked', () => {
-  setup('/search/javascript');
-  const termsLink = screen.getByRole('link', { name: /terms & privacy/i });
+  const { footer } = setup('/search/javascript');
+
+  const termsLink = within(footer).getByRole('link', { name: /terms & privacy/i });
   userEvent.click(termsLink);
   expect(screen.getByText(/terms page/i)).toBeInTheDocument();
 });
