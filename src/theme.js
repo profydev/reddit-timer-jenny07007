@@ -18,6 +18,7 @@ const theme = {
       h1: '38px',
       h3: '24px',
       h6: '18px',
+      small: '14px',
     },
     weight: {
       normal: 400,

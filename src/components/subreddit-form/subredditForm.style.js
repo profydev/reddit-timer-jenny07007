@@ -32,7 +32,17 @@ export const Form = styled.form`
 export const Input = styled.input`
     width: 370px;
     height: 36px;
+    text-indent: 17px;
     border: 1px solid ${({ theme }) => theme.color.lightGray};
+
+    &[type="text"] {
+      font-size: ${({ theme }) => theme.font.size.default};
+      letter-spacing: .5px;
+    }
+
+    &::placeholder {
+      font-size: ${({ theme }) => theme.font.size.small}
+    }
 `;
 
 export const PrefixedText = styled.p`
