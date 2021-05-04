@@ -3,7 +3,8 @@ const theme = {
     black: '#000000',
     white: '#ffffff',
     gray: '#636363',
-    lightGray: '#93918F',
+    lighterGray: '#93918F',
+    lightGray: '#e6e6e6',
     yellow: '#FDB755',
     blue: '#079afc',
   },
@@ -16,6 +17,7 @@ const theme = {
       default: '16px',
       h1: '38px',
       h3: '24px',
+      h6: '18px',
     },
     weight: {
       normal: 400,

@@ -12,7 +12,7 @@ export const Article = styled.article`
 `;
 
 const TextBase = css`
-  color: ${({ theme }) => theme.color.lightGray};
+  color: ${({ theme }) => theme.color.lighterGray};
   font-weight: ${({ theme }) => theme.font.weight.normal};
   font-family: ${({ theme }) => theme.font.family.default};
   font-size: ${({ theme }) => theme.font.size.default};

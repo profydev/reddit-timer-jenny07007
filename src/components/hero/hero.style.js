@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components/macro';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.section`
   width: 100vw;
@@ -24,7 +23,7 @@ export const Title = styled.h1`
 
 const textBase = css`
   font-size: ${({ theme }) => theme.font.size.default};
-  color: ${({ theme }) => theme.color.lightGray};
+  color: ${({ theme }) => theme.color.lighterGray};
 `;
 
 export const SubTitle = styled.p`
@@ -33,21 +32,6 @@ export const SubTitle = styled.p`
   @media(max-width: 738px) {
     line-height: 1.7;
   }
-`;
-
-export const Button = styled(Link)`
-  width: 216px;
-  height: 36px;
-  line-height: 36px;
-  display: inline-block;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  margin: 30px 0;
-  color: ${({ theme }) => theme.color.white};
-  background: ${({ theme }) => theme.color.yellow};
-  font-weight: ${({ theme }) => theme.font.weight.medium};
 `;
 
 export const Text = styled.p`
