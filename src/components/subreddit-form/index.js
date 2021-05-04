@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import Button from '../button';
 import {
   Container, Frame, Form, Title, Input, PrefixedText,
@@ -7,14 +7,17 @@ import {
 
 export default function SubredditForm() {
   const history = useHistory();
-  const { pathname } = history.location;
-  const [searchTerm, setSearchTerm] = useState(pathname.slice(8) || '');
+  const { term } = useParams();
+  const [searchTerm, setSearchTerm] = useState(term || '');
+
+  useEffect(() => {
+    setSearchTerm(term);
+  }, [term]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!searchTerm) return;
     history.push(`/search/${searchTerm}`);
-    setSearchTerm('');
   };
 
   return (
