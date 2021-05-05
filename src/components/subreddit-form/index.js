@@ -7,17 +7,17 @@ import {
 
 export default function SubredditForm() {
   const history = useHistory();
-  const { term } = useParams();
-  const [searchTerm, setSearchTerm] = useState(term || '');
+  const { subreddit: initialSubreddit } = useParams();
+  const [subreddit, setSubreddit] = useState(initialSubreddit || '');
 
   useEffect(() => {
-    setSearchTerm(term);
-  }, [term]);
+    setSubreddit(initialSubreddit);
+  }, [initialSubreddit]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!searchTerm) return;
-    history.push(`/search/${searchTerm}`);
+    if (!subreddit) return;
+    history.push(`/search/${subreddit}`);
   };
 
   return (
@@ -28,9 +28,9 @@ export default function SubredditForm() {
           <PrefixedText>r /</PrefixedText>
           <Input
             type="text"
-            placeholder="javasctipt"
-            value={searchTerm}
-            onChange={({ target }) => setSearchTerm(target.value)}
+            placeholder="javascript"
+            value={subreddit}
+            onChange={({ target }) => setSubreddit(target.value)}
           />
           <Button type="submit" content="search" />
         </Form>

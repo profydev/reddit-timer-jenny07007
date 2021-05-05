@@ -18,8 +18,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact component={Homepage} />
-        <Route path="/search/:term" component={SearchPage} />
-        <Route path="/terms">Terms page</Route>
+        <Route path="/search/:subreddit" component={SearchPage} />
         <Redirect to="/" />
       </Switch>
       <Footer />
