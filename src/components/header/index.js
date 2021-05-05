@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container, Logo, Nav, NavLink, HashLink,
+  Container, Logo, Nav, HashLink, NavLink,
 } from './header.style';
 import logo from '../../img/logotype.svg';
 import { DEFAULT_SUBREDDIT } from '../../constants/subreddit';
