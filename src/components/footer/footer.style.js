@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components/macro';
 import { Link as ReactRouterLink } from 'react-router-dom';
-import { ReactComponent as SignLogo } from '../../img/sign.svg';
+import { ReactComponent as SignLogo } from '../../assets/sign.svg';
 
 export const Container = styled.footer`
   height: 100px;

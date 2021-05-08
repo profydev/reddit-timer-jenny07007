@@ -1,8 +1,8 @@
 import React from 'react';
-import { SubredditForm } from '../components/index';
+import { SubRedditForm } from '../components/index';
 
 export default function SearchPage() {
   return (
-    <SubredditForm />
+    <SubRedditForm />
   );
 }

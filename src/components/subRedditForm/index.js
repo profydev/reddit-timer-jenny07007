@@ -5,7 +5,7 @@ import {
   Container, Frame, Form, Title, Input, PrefixedText,
 } from './subredditForm.style';
 
-export default function SubredditForm() {
+export default function SubRedditForm() {
   const history = useHistory();
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit || '');
