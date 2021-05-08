@@ -2,7 +2,7 @@
 import styled from 'styled-components/macro';
 
 export const ButtonStyle = styled.button`
-  width: ${(props) => (props.size === 'lg' ? '216px' : '92px')};
+  padding: 0 16px;
   height: 36px;
   line-height: 36px;
   display: inline-block;
@@ -15,4 +15,13 @@ export const ButtonStyle = styled.button`
   color: ${({ theme }) => theme.color.white};
   background: ${({ theme }) => theme.color.yellow};
   font-weight: ${({ theme }) => theme.font.weight.medium};
+
+  &:hover {
+    background: ${({ theme }) => theme.color.darkerYellow};
+  }
+
+  &[aria-disabled='true'] {
+    background: ${({ theme }) => theme.color.lightGray};
+    cursor: default;
+  }
   `;

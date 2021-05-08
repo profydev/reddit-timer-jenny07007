@@ -1,15 +1,15 @@
 import React from 'react';
-import PropsType from 'prop-types';
+import PropTypes from 'prop-types';
 import { ButtonStyle } from './button.style';
 
-export default function Button({ content, size }) {
+export default function Button({ content, disabled }) {
   return (
-    <ButtonStyle size={size}>{content}</ButtonStyle>
+    <ButtonStyle aria-disabled={disabled}>{content}</ButtonStyle>
   );
 }
 
 Button.propTypes = {
-  content: PropsType.string.isRequired,
+  content: PropTypes.string.isRequired,
   // eslint-disable-next-line react/require-default-props
-  size: PropsType.string,
+  disabled: PropTypes.bool,
 };

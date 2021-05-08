@@ -1,14 +1,15 @@
-import styled from 'styled-components/macro';
+import styled, { keyframes } from 'styled-components/macro';
 
 export const Container = styled.section`
   width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Frame = styled.div`
  max-width: 1115px;
  text-align: center;
+ margin: 0 auto;
  @media(max-width: 1115px) {
     width: 95%;
   }
@@ -48,4 +49,19 @@ export const Input = styled.input`
 export const PrefixedText = styled.p`
   font-size: ${({ theme }) => theme.font.size.h6};
   color: ${({ theme }) => theme.color.lighterGray};
+`;
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Spinner = styled.img`
+  animation: ${rotate360} 1.5s linear infinite;
+  width: 70px;
+  margin: 1rem 0;
 `;
