@@ -31,7 +31,7 @@ export default function SubRedditForm() {
     e.preventDefault();
     if (!subreddit) return;
     setError(null);
-    history.push(`/search/${subreddit}`);
+    history.push(`/search/${cleanedRedditString}`);
 
     doRequest();
   };
