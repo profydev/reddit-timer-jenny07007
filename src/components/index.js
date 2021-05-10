@@ -3,3 +3,4 @@ export { default as Footer } from './footer';
 export { default as Hero } from './hero';
 export { default as Info } from './info';
 export { default as SubRedditForm } from './subRedditForm';
+export { default as Heatmap } from './heatmap';
