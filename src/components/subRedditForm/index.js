@@ -4,11 +4,14 @@ import {
   Container, Frame, Form, Title, Input, PrefixedText,
 } from './subredditForm.style';
 import { SubRedditContext } from '../../contexts/subRedditContext';
+import fetchPosts from '../../hooks/useFetchPosts';
 
 export default function SubRedditForm() {
   const {
     subreddit, onSubredditChange, onSubredditSubmit, isLoading,
   } = useContext(SubRedditContext);
+
+  fetchPosts('javascript').then((result) => console.log(result)).catch((err) => console.log(err));
 
   return (
     <Container>
