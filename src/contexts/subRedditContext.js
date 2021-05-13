@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import useFetchPosts from '../hooks/useFetchPosts';
 
 export const SubRedditContext = createContext();
 
@@ -9,7 +10,9 @@ export default function SubRedditContextProvider({ children }) {
   const { subreddit: initialSubreddit } = useParams();
   const [subreddit, setSubreddit] = useState(initialSubreddit);
   const trimedRedditString = subreddit.replace(/[\W_]/g, '');
-  const [isLoading, setIsLoading] = useState(false);
+  const {
+    isLoading, posts, error, setError,
+  } = useFetchPosts();
 
   useEffect(() => {
     setSubreddit(initialSubreddit);
@@ -18,15 +21,15 @@ export default function SubRedditContextProvider({ children }) {
   const onSubredditChange = (e) => setSubreddit(e.target.value);
 
   const onSubredditSubmit = (e) => {
-    setIsLoading(true);
     e.preventDefault();
     if (!subreddit) return;
     history.push(`/search/${trimedRedditString}`);
-    // setIsLoading(false);
   };
 
+  const onKeyDown = () => setError(null);
+
   const values = {
-    subreddit, onSubredditChange, onSubredditSubmit, isLoading,
+    subreddit, onSubredditChange, onSubredditSubmit, onKeyDown, isLoading, posts, error,
   };
 
   return (

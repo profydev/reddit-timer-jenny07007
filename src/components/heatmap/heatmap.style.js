@@ -18,7 +18,6 @@ const rotate360 = keyframes`
   }
 `;
 
-// eslint-disable-next-line import/prefer-default-export
 export const Spinner = styled.img`
   animation: ${rotate360} 1.5s linear infinite;
   width: 70px;

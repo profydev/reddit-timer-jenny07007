@@ -4,14 +4,11 @@ import {
   Container, Frame, Form, Title, Input, PrefixedText,
 } from './subredditForm.style';
 import { SubRedditContext } from '../../contexts/subRedditContext';
-import fetchPosts from '../../hooks/useFetchPosts';
 
 export default function SubRedditForm() {
   const {
-    subreddit, onSubredditChange, onSubredditSubmit, isLoading,
+    subreddit, onSubredditChange, onSubredditSubmit, isLoading, onKeyDown,
   } = useContext(SubRedditContext);
-
-  fetchPosts('javascript').then((result) => console.log(result)).catch((err) => console.log(err));
 
   return (
     <Container>
@@ -24,6 +21,7 @@ export default function SubRedditForm() {
             placeholder="javascript"
             value={subreddit}
             onChange={onSubredditChange}
+            onKeyDown={onKeyDown}
           />
           <Button type="submit" content="search" disabled={isLoading} />
         </Form>

@@ -8,6 +8,8 @@ const theme = {
     yellow: '#FDB755',
     darkerYellow: '#FEA62E',
     blue: '#079afc',
+    errorBorder: '#FFC5D0',
+    errorText: '#FB6090',
   },
   font: {
     family: {
