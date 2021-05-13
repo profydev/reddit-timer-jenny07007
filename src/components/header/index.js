@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   Container, Logo, Nav, HashLink, NavLink,
 } from './header.style';
-import logo from '../../img/logotype.svg';
+import logo from '../../assets/logotype.svg';
 import { DEFAULT_SUBREDDIT } from '../../constants/subreddit';
 
 export default function Header() {

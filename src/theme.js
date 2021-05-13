@@ -1,12 +1,15 @@
 const theme = {
   color: {
     black: '#000000',
-    white: '#ffffff',
+    white: '#FFFFFF',
     gray: '#636363',
     lighterGray: '#93918F',
-    lightGray: '#e6e6e6',
+    lightGray: '#E6E6E6',
     yellow: '#FDB755',
+    darkerYellow: '#FEA62E',
     blue: '#079afc',
+    errorBorder: '#FFC5D0',
+    errorText: '#FB6090',
   },
   font: {
     family: {

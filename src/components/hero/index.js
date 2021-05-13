@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
   Container, Title, SubTitle, Frame, Text, TimeTable,
 } from './hero.style';
-import timeTable from '../../img/table.png';
+import timeTable from '../../assets/table.png';
 import Button from '../button';
 import { DEFAULT_SUBREDDIT } from '../../constants/subreddit';
 

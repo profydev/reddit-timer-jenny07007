@@ -1,8 +1,12 @@
 import React from 'react';
-import { SubredditForm } from '../components/index';
+import { SubRedditForm, Heatmap } from '../components/index';
+import SubRedditContextProvider from '../contexts/subRedditContext';
 
 export default function SearchPage() {
   return (
-    <SubredditForm />
+    <SubRedditContextProvider>
+      <SubRedditForm />
+      <Heatmap />
+    </SubRedditContextProvider>
   );
 }

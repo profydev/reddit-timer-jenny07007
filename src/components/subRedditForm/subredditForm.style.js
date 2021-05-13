@@ -3,12 +3,13 @@ import styled from 'styled-components/macro';
 export const Container = styled.section`
   width: 100vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 `;
 
 export const Frame = styled.div`
  max-width: 1115px;
  text-align: center;
+ margin: 0 auto;
  @media(max-width: 1115px) {
     width: 95%;
   }
